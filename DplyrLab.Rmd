@@ -29,6 +29,7 @@ Now, change this to see the same plot for the Droids.
 
 ```{r}
 
+starwars %>% filter(species == "Droid") %>% plot(mass ~ height, data = .)
 
 ```
 
@@ -37,19 +38,20 @@ How many characters are from each planet?
 
 ```{r}
 
-
+starwars %>% group_by(homeworld) %>% count()
 
 ```
 
 If you wanted to arrange this in descending order, what would you add to the pipe? 
 
 ```{r}
-
+starwars %>% count(homeworld) %>% arrange(n) 
 ```
 
 Find the average height for each eye color.
 
 ```{r}
+
 
 
 ```
